@@ -32,26 +32,26 @@
             panel1 = new Panel();
             label17 = new Label();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
+            txtPatientID = new TextBox();
             label1 = new Label();
             label2 = new Label();
             panel2 = new Panel();
             label4 = new Label();
-            comboBox1 = new ComboBox();
+            cmbWardCategory = new ComboBox();
             label15 = new Label();
             btnCont = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            dtpAdmission = new DateTimePicker();
             label11 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtpDischarge = new DateTimePicker();
             label3 = new Label();
             label5 = new Label();
             panel3 = new Panel();
             label6 = new Label();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox6 = new CheckBox();
-            checkBox5 = new CheckBox();
+            chkHypertension = new CheckBox();
+            chkDiabetes = new CheckBox();
+            chkHeart = new CheckBox();
+            chkKidney = new CheckBox();
+            chkRespiratory = new CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -90,13 +90,13 @@
             pictureBox1.TabIndex = 33;
             pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtPatientID
             // 
-            textBox1.Font = new Font("Bahnschrift Condensed", 12F);
-            textBox1.Location = new Point(56, 117);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 27);
-            textBox1.TabIndex = 37;
+            txtPatientID.Font = new Font("Bahnschrift Condensed", 12F);
+            txtPatientID.Location = new Point(56, 117);
+            txtPatientID.Name = "txtPatientID";
+            txtPatientID.Size = new Size(200, 27);
+            txtPatientID.TabIndex = 37;
             // 
             // label1
             // 
@@ -141,14 +141,14 @@
             label4.TabIndex = 58;
             label4.Text = "MEDICAL CONDITIONS ";
             // 
-            // comboBox1
+            // cmbWardCategory
             // 
-            comboBox1.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(262, 117);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(404, 27);
-            comboBox1.TabIndex = 70;
+            cmbWardCategory.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbWardCategory.FormattingEnabled = true;
+            cmbWardCategory.Location = new Point(262, 117);
+            cmbWardCategory.Name = "cmbWardCategory";
+            cmbWardCategory.Size = new Size(404, 27);
+            cmbWardCategory.TabIndex = 70;
             // 
             // label15
             // 
@@ -172,15 +172,16 @@
             btnCont.TabIndex = 71;
             btnCont.Text = "ALLOCATE BED";
             btnCont.UseVisualStyleBackColor = false;
+            btnCont.Click += btnCont_Click;
             // 
-            // dateTimePicker1
+            // dtpAdmission
             // 
-            dateTimePicker1.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(56, 381);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 27);
-            dateTimePicker1.TabIndex = 74;
+            dtpAdmission.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpAdmission.Format = DateTimePickerFormat.Custom;
+            dtpAdmission.Location = new Point(56, 381);
+            dtpAdmission.Name = "dtpAdmission";
+            dtpAdmission.Size = new Size(200, 27);
+            dtpAdmission.TabIndex = 74;
             // 
             // label11
             // 
@@ -192,14 +193,14 @@
             label11.TabIndex = 72;
             label11.Text = "Admission Date";
             // 
-            // dateTimePicker2
+            // dtpDischarge
             // 
-            dateTimePicker2.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker2.Format = DateTimePickerFormat.Custom;
-            dateTimePicker2.Location = new Point(292, 381);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 27);
-            dateTimePicker2.TabIndex = 76;
+            dtpDischarge.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDischarge.Format = DateTimePickerFormat.Custom;
+            dtpDischarge.Location = new Point(292, 381);
+            dtpDischarge.Name = "dtpDischarge";
+            dtpDischarge.Size = new Size(200, 27);
+            dtpDischarge.TabIndex = 76;
             // 
             // label3
             // 
@@ -242,83 +243,83 @@
             label6.TabIndex = 41;
             label6.Text = "Please check any of the following that applies to you";
             // 
-            // checkBox1
+            // chkHypertension
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(56, 223);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(97, 23);
-            checkBox1.TabIndex = 58;
-            checkBox1.Text = "Hypertension";
-            checkBox1.UseVisualStyleBackColor = true;
+            chkHypertension.AutoSize = true;
+            chkHypertension.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkHypertension.Location = new Point(56, 223);
+            chkHypertension.Name = "chkHypertension";
+            chkHypertension.Size = new Size(97, 23);
+            chkHypertension.TabIndex = 58;
+            chkHypertension.Text = "Hypertension";
+            chkHypertension.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkDiabetes
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox2.Location = new Point(56, 252);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(73, 23);
-            checkBox2.TabIndex = 59;
-            checkBox2.Text = "Diabetes";
-            checkBox2.UseVisualStyleBackColor = true;
+            chkDiabetes.AutoSize = true;
+            chkDiabetes.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkDiabetes.Location = new Point(56, 252);
+            chkDiabetes.Name = "chkDiabetes";
+            chkDiabetes.Size = new Size(73, 23);
+            chkDiabetes.TabIndex = 59;
+            chkDiabetes.Text = "Diabetes";
+            chkDiabetes.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkHeart
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox3.Location = new Point(56, 281);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(101, 23);
-            checkBox3.TabIndex = 60;
-            checkBox3.Text = "Heart Disease";
-            checkBox3.UseVisualStyleBackColor = true;
+            chkHeart.AutoSize = true;
+            chkHeart.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkHeart.Location = new Point(56, 281);
+            chkHeart.Name = "chkHeart";
+            chkHeart.Size = new Size(101, 23);
+            chkHeart.TabIndex = 60;
+            chkHeart.Text = "Heart Disease";
+            chkHeart.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkKidney
             // 
-            checkBox6.AutoSize = true;
-            checkBox6.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox6.Location = new Point(292, 223);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(107, 23);
-            checkBox6.TabIndex = 61;
-            checkBox6.Text = "Kidney Disease";
-            checkBox6.UseVisualStyleBackColor = true;
+            chkKidney.AutoSize = true;
+            chkKidney.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkKidney.Location = new Point(292, 223);
+            chkKidney.Name = "chkKidney";
+            chkKidney.Size = new Size(107, 23);
+            chkKidney.TabIndex = 61;
+            chkKidney.Text = "Kidney Disease";
+            chkKidney.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chkRespiratory
             // 
-            checkBox5.AutoSize = true;
-            checkBox5.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox5.Location = new Point(292, 252);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(136, 23);
-            checkBox5.TabIndex = 62;
-            checkBox5.Text = "Respiratory Disorder";
-            checkBox5.UseVisualStyleBackColor = true;
+            chkRespiratory.AutoSize = true;
+            chkRespiratory.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chkRespiratory.Location = new Point(292, 252);
+            chkRespiratory.Name = "chkRespiratory";
+            chkRespiratory.Size = new Size(136, 23);
+            chkRespiratory.TabIndex = 62;
+            chkRespiratory.Text = "Respiratory Disorder";
+            chkRespiratory.UseVisualStyleBackColor = true;
             // 
             // AllocateBeds
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(729, 566);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(dtpDischarge);
             Controls.Add(label3);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpAdmission);
             Controls.Add(label11);
             Controls.Add(btnCont);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbWardCategory);
             Controls.Add(label15);
             Controls.Add(panel3);
-            Controls.Add(checkBox5);
-            Controls.Add(checkBox6);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(chkRespiratory);
+            Controls.Add(chkKidney);
+            Controls.Add(chkHeart);
+            Controls.Add(chkDiabetes);
+            Controls.Add(chkHypertension);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label6);
-            Controls.Add(textBox1);
+            Controls.Add(txtPatientID);
             Controls.Add(label1);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
@@ -339,26 +340,26 @@
         #endregion
         private Panel panel1;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox txtPatientID;
         private Label label1;
         private Label label2;
         private Panel panel2;
         private Label label4;
         private Label label17;
-        private ComboBox comboBox1;
+        private ComboBox cmbWardCategory;
         private Label label15;
         private Button btnCont;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpAdmission;
         private Label label11;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtpDischarge;
         private Label label3;
         private Label label5;
         private Panel panel3;
         private Label label6;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private CheckBox checkBox6;
-        private CheckBox checkBox5;
+        private CheckBox chkHypertension;
+        private CheckBox chkDiabetes;
+        private CheckBox chkHeart;
+        private CheckBox chkKidney;
+        private CheckBox chkRespiratory;
     }
 }

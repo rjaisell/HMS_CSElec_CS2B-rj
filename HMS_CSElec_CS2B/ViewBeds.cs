@@ -21,6 +21,11 @@ namespace HMS_CSElec_CS2B
 
         private void ViewBeds_Load(object sender, EventArgs e)
         {
+            loadBeds();
+        }
+
+        private void loadBeds()
+        {
             using (MySqlConnection conn = new MySqlConnection(connection))
             {
                 conn.Open();
@@ -30,6 +35,11 @@ namespace HMS_CSElec_CS2B
                 da.Fill(dt); // Fill the DataTable 'dt' with data from the MySqlDataAdapter 'da'
                 dgViewB.DataSource = dt; // Set the data source of the DataGridView 'dgStud' to the DataTable 'dt' to display the data
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadBeds();
         }
     }
 }

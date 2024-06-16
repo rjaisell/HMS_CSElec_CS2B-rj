@@ -34,6 +34,7 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             label17 = new Label();
+            btnRefresh = new Button();
             ((System.ComponentModel.ISupportInitialize)dgViewB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -54,9 +55,9 @@
             // dgViewB
             // 
             dgViewB.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgViewB.Location = new Point(30, 118);
+            dgViewB.Location = new Point(30, 133);
             dgViewB.Name = "dgViewB";
-            dgViewB.Size = new Size(668, 360);
+            dgViewB.Size = new Size(668, 345);
             dgViewB.TabIndex = 4;
             // 
             // pictureBox1
@@ -91,11 +92,26 @@
             label17.TabIndex = 60;
             label17.Text = "Hospital Management System";
             // 
+            // btnRefresh
+            // 
+            btnRefresh.BackColor = Color.SteelBlue;
+            btnRefresh.FlatStyle = FlatStyle.Flat;
+            btnRefresh.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefresh.ForeColor = Color.White;
+            btnRefresh.Location = new Point(31, 92);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(103, 30);
+            btnRefresh.TabIndex = 61;
+            btnRefresh.Text = "REFRESH";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
             // ViewBeds
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(729, 566);
+            Controls.Add(btnRefresh);
             Controls.Add(panel1);
             Controls.Add(dgViewB);
             Controls.Add(label2);
@@ -117,5 +133,6 @@
         private PictureBox pictureBox1;
         private Panel panel1;
         private Label label17;
+        private Button btnRefresh;
     }
 }

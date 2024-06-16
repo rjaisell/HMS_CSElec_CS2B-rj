@@ -25,7 +25,6 @@ namespace HMS_CSElec_CS2B
             {
                 try
                 {
-                    frmViewAppointments viewAppointmentsForm = new frmViewAppointments();
                     await conn.OpenAsync();
                     MySqlCommand cmd = new MySqlCommand("INSERT INTO patient_table (patientLName, patientFName, patientMName, patientContact, patientAddress, patientBday, apptDate, apptType) VALUES (@LName, @FName, @MName, @Contact, @Address, @Bday, @ApptDate, @ApptType)", conn);
 
@@ -40,7 +39,6 @@ namespace HMS_CSElec_CS2B
 
                     await cmd.ExecuteNonQueryAsync();
                     MessageBox.Show("Successfully Added!");
-                    viewAppointmentsForm.dgApptV.Refresh();
                     txtLName.Clear();
                     txtFName.Clear();
                     txtMName.Clear();
