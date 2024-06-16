@@ -42,6 +42,16 @@ namespace HMS_CSElec_CS2B
 
                         conn.Open();
                         cmd.ExecuteNonQuery();
+                        MessageBox.Show("Successfully allocated.");
+                        txtPatientID.Text = "";
+                        cmbWardCategory.SelectedIndex = -1;
+                        chkHypertension.Checked = false;
+                        chkDiabetes.Checked = false;
+                        chkHeart.Checked = false;
+                        chkKidney.Checked = false;
+                        chkRespiratory.Checked = false;
+                        dtpAdmission.Value = DateTime.Today;
+                        dtpDischarge.Value = DateTime.Today;
                     }
                 }
             }
@@ -51,5 +61,6 @@ namespace HMS_CSElec_CS2B
                 MessageBox.Show("Invalid PatientID. Please enter a valid integer.");
             }
         }
+
     }
 }
